@@ -1,0 +1,9 @@
+logging:
+  level:
+    com.sensysgatso.assignment: debug
+
+sensysgatso:
+  violation:
+    fees:
+      REDLIGHT: 100.0
+      SPEED: 50.0

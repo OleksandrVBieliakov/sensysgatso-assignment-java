@@ -1,0 +1,60 @@
+{
+  "events" : [
+    {
+      "eventDate": "2022-02-09T00:25:21.529",
+      "eventType": "SPEED",
+      "licensePlate": "ABC-001",
+      "speed": "81.0",
+      "limit": "50.0",
+      "unity": "km/h"
+    },
+    {
+      "eventDate": "2022-02-09T00:25:22.529",
+      "eventType": "REDLIGHT",
+      "licensePlate": "ABC-002",
+      "speed": "82.0",
+      "limit": "50.0",
+      "unity": "km/h"
+    },
+    {
+      "eventDate": "2022-02-09T00:25:23.529",
+      "eventType": "SPEED",
+      "licensePlate": "ABC-003",
+      "speed": "83.0",
+      "limit": "50.0",
+      "unity": "km/h"
+    },
+    {
+      "eventDate": "2022-02-09T00:25:24.529",
+      "eventType": "NOPROBLEM",
+      "licensePlate": "ABC-004",
+      "speed": "44.0",
+      "limit": "50.0",
+      "unity": "km/h"
+    },
+    {
+      "eventDate": "2022-02-09T00:25:25.529",
+      "eventType": "PARKED",
+      "licensePlate": "ABC-005",
+      "speed": "0.0",
+      "limit": "50.0",
+      "unity": "km/h"
+    },
+    {
+      "eventDate": "2022-02-09T00:25:26.529",
+      "eventType": "SPEED",
+      "licensePlate": "ABC-006",
+      "speed": "86.0",
+      "limit": "50.0",
+      "unity": "km/h"
+    },
+    {
+      "eventDate": "2022-02-09T00:25:27.529",
+      "eventType": "SPEED",
+      "licensePlate": "ABC-007",
+      "speed": "87.0",
+      "limit": "50.0",
+      "unity": "km/h"
+    }
+  ]
+}
