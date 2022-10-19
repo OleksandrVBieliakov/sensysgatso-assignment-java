@@ -1,0 +1,12 @@
+#Uncomment if you need the most detailed logging
+
+#spring:
+#  jpa:
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+
+#logging:
+#  level:
+#    org.hibernate.type: trace

@@ -9,9 +9,7 @@ import com.sensysgatso.assignment.service.ViolationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 @Slf4j
@@ -23,8 +21,6 @@ public class ViolationServiceImpl implements ViolationService {
     public ViolationServiceImpl(ViolationRepository violationRepository) {
         this.violationRepository = violationRepository;
     }
-
-    private final Summary zeroSummary = new Summary(0, BigDecimal.ZERO);
 
     @Override
     public Violation getViolationById(UUID id) {
@@ -47,14 +43,14 @@ public class ViolationServiceImpl implements ViolationService {
     public void payViolationById(UUID id) {
         Violation violation = getViolationById(id);
         violation.setPaid(true);
-        violationRepository.save(violation);
+        violation = violationRepository.save(violation);
+        log.info("Paid {}", violation);
     }
 
     @Override
     public ViolationsSummary getViolationsSummary() {
-        Map<Boolean, Summary> summaries = violationRepository.findSummary();
-        Summary paid = summaries.getOrDefault(true, zeroSummary);
-        Summary unpaid = summaries.getOrDefault(false, zeroSummary);
+        Summary paid = violationRepository.findSummary(true);
+        Summary unpaid = violationRepository.findSummary(false);
         return new ViolationsSummary(paid, unpaid);
     }
 }

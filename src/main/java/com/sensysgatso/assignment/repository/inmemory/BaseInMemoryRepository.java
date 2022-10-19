@@ -3,13 +3,8 @@ package com.sensysgatso.assignment.repository.inmemory;
 import com.sensysgatso.assignment.model.BaseEntity;
 import com.sensysgatso.assignment.repository.BaseEntityRepository;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-
-import static java.util.stream.Collectors.toList;
 
 abstract public class BaseInMemoryRepository<T extends BaseEntity> implements BaseEntityRepository<T> {
     private final Map<UUID, T> entities = new ConcurrentHashMap<>();
@@ -29,6 +24,6 @@ abstract public class BaseInMemoryRepository<T extends BaseEntity> implements Ba
 
     @Override
     public List<T> findAll() {
-        return entities.values().stream().collect(toList());
+        return new ArrayList<>(entities.values());
     }
 }

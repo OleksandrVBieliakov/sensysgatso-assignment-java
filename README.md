@@ -22,6 +22,24 @@ Also you can start an executable jar.
 ./target/assignment-java.jar
 ```
 
+
+
+## Spring profiles
+
+There are two profiles: **inmemory** and **jpa**.
+
+Default is inmemory. It uses a custom in-memory data structure to store the data.
+
+Jpa profile uses H2 database and JPA repositories.
+
+To test, buld and run the application with JPA provide explicit profile
+
+```
+./mvnw test -Dspring.profiles.active=jpa
+./mvnw package -Dspring.profiles.active=jpa
+./mvnw spring-boot:run -Dspring-boot.run.profiles=jpa
+```
+
 ## Tested Java versions: 8, 11 and 17
 
 You may change the version in pom.xml. Keep 1.8 for maximum compatibility

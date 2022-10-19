@@ -23,8 +23,8 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public void saveEvent(Event event) {
-        log.debug("Saving {}", event);
-        eventRepository.save(event);
+        Event savedEvent = eventRepository.save(event);
+        log.info("Saved {}", savedEvent);
     }
 
     @Override
